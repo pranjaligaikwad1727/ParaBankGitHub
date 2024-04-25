@@ -1,0 +1,17 @@
+# Created on 2024-04-25T13:34:25.403
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:397)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:386)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+# Created on 2024-04-25T13:34:29.245
+Unexpected IOException: 8,1,com.qa.tests.AccountOverviewSuite,TC_AOF_001_VerifyWhetherAccountOverviewPageDisplayedOrNot(com.qa.tests.AccountOverviewSuite),null,null,null,null,AccountOverviewSuite.TC_AOF_001_VerifyWhetherAccountOverviewPageDisplayedOrNot:42 \00BB NullPointer,java.lang.NullPointerException\000A\0009at com.qa.tests.AccountOverviewSuite.TC_AOF_001_VerifyWhetherAccountOverviewPageDisplayedOrNot(AccountOverviewSuite.java:42)\000A
+
+
+# Created on 2024-04-25T13:34:29.538
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+
