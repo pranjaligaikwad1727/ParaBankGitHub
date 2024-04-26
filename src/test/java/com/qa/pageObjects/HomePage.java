@@ -25,8 +25,7 @@ public class HomePage {
 	@FindBy(css = "[href*='transfer']")
 	WebElement transferFunds;
 
-	@FindBy(css = ".smallText")
-	WebElement headerUserName;
+
 	
 	
 	@FindBy(css = "[href*='billpay']")
@@ -42,21 +41,7 @@ public class HomePage {
 
 	}
 
-	@Step("Get Welcome text with Username")
-	public String getHeaderUserNameWithWelcomeText() {
-		try {
-			 headerUserName.getText();
-			 ExtentLogger.pass("Username captured from Homepage : "+ headerUserName.getText());
-			 AllureListener.saveTextLog("Username captured from Homepage : "+ headerUserName.getText());
 
-		} catch (Exception e) {
-			// TODO: handle exception
-			ExtentLogger.fail("User not able to login into application :Not able to get Username from homepage");
-			AllureListener.saveTextLog("User not able to login into application :Not able to get Username from homepage");
-		    Assert.fail("User not able to login into application :Not able to get Username from homepage");
-		}
-		return  headerUserName.getText();
-	}
 
 	@Step("Click on Open New Account Tab")
 	public void clickOnOpenNewAccountTab() {

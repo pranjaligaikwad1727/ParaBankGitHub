@@ -46,8 +46,8 @@ public class AccountOverviewPage  {
 			if(acountOverviewHeader.isDisplayed())
 			{
 				textDisplayed=true;
-				ExtentLogger.pass("User is land on Account Overview Page");
-				AllureListener.saveTextLog("User is land on Account Overview Page");
+				ExtentLogger.pass("User successfully land on Account Overview Page");
+				AllureListener.saveTextLog("User successfully land on Account Overview Page");
 			}
 			else {
 				textDisplayed=false;

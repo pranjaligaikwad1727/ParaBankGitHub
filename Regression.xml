@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Para Bank Web Application ">
+<suite  name="Para Bank Web Application ">
 
 	<groups>
 		<run>
@@ -40,4 +40,16 @@
 
 		</classes>
 	</test>
+	<test thread-count="1" parallel="tests" name="Bill Payment Functionality Validation">
+		<classes>
+			<class name="com.qa.tests.BillPaymentSuite" />
+		</classes>
+	</test>
+
+	<test thread-count="1" parallel="tests" name="Update Contact Info Functionality Validation">
+		<classes>
+			<class name="com.qa.tests.UpdateContactInfoSuite" />
+		</classes>
+	</test>
+
 </suite> <!-- Suite -->

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.qa.reports.AllureListener;
+import com.qa.reports.ExtentLogger;
 import com.qa.reusableComponents.CommonMethods;
 import io.qameta.allure.Step;
 
@@ -149,21 +150,25 @@ public class BillPayPage {
 	public boolean verifyBillPaymentCompletedMsg(String expectedMsg) {
 
 		boolean flag = false;
+		CommonMethods.waitForElement(driver, "Bill Payment Messge", successBillPaymentMsg);
 		String successText=successBillPaymentMsg.getAttribute("innerHTML").trim();
 		try {
 			if(successText.equalsIgnoreCase(expectedMsg))
 			{
 				flag = true;
+				ExtentLogger.pass("Success Text :"+successText);
 				AllureListener.saveTextLog("Success Text :"+successText);
 			}
 			else
 			{
 				flag=false;
+				ExtentLogger.fail("User is not able to complete Bill Payment Process");
 				AllureListener.saveTextLog("User is not able to complete Bill Payment Process");
 				Assert.fail("User is not able to complete Bill Payment Process");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
+			ExtentLogger.fail("User is not able to complete Bill Payment Process");
 			AllureListener.saveTextLog("User is not able to complete Bill Payment Process");
 			Assert.fail("User is not able to complete Bill Payment Process");
 		}

@@ -21,7 +21,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Listeners({ AllureListener.class })
+//@Listeners({ AllureListener.class })
 //@Listeners(com.qa.reports.ExtentListener.class)
 @Epic("Account services")
 @Feature("Account services_Account Overview")

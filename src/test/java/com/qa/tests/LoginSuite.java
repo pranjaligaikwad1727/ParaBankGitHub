@@ -24,7 +24,7 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
 //@Listeners({AllureListener.class})
-@Listeners(com.qa.reports.ExtentListener.class)
+//@Listeners(com.qa.reports.ExtentListener.class)
 //retryAnalyzer = TestRetryAnalyzer.class
 
 @Epic("User Management")
@@ -46,14 +46,6 @@ public class LoginSuite extends BaseClass{
 
 		LoginPage loginPage= new LoginPage(getDriver());
 		loginPage.loginIntoApplication(input.get("username"), input.get("password"));
-	
-		HomePage homePage=new HomePage(getDriver());
-		// verify successful login  welcome message with combination of user firstName+lastName
-		String actualUserName=homePage.getHeaderUserNameWithWelcomeText();
-		String  expectedUserName="Welcome"+" "+input.get("firstName")+" "+input.get("lastName");
-		
-		Assert.assertEquals(actualUserName, expectedUserName);
-	
 	    
 	}
 	

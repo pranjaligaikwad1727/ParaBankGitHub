@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tests.UserSignUpSuite">
+      <class name="com.qa.tests.LoginSuite">
         <methods>
           <include name="initialize_driver"/>
+          <include name="TC_LF_001_VerifyUserLoginIntoApplicationWithValidCredentials"/>
           <include name="tearDown"/>
-          <include name="TC_RF_001_VerifyWhetherTheUserABleToRegisterInParaBankApplicationWithValidTestData"/>
         </methods>
-      </class> <!-- com.qa.tests.UserSignUpSuite -->
+      </class> <!-- com.qa.tests.LoginSuite -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -73,8 +73,8 @@ public class SignUpPage  {
 	
 	@Step("Click on Register Link for Sign Up user details")
 	public void clickOnRegisterLink() {
-		CommonMethods.waitForElement(driver, "Register", register);
-		CommonMethods.click_custom(register, "Register");
+		CommonMethods.waitForElement(driver, "Register Link", register);
+		CommonMethods.click_custom(register, "Register Link");
 
 	}
 	@Step("Enter First Name of the user")
@@ -148,8 +148,8 @@ public class SignUpPage  {
 	public void clickOnRegisterButtonForSubmitUserSignUpForm() 
 	{
 		allureListener.saveScreenShot(driver);
-		CommonMethods.waitForElement(driver, "Register_Submit", submit);
-		CommonMethods.click_custom(submit, "Register_Submit");
+		CommonMethods.waitForElement(driver, "Register Button", submit);
+		CommonMethods.click_custom(submit, "Register Button");
 
 	}
 	

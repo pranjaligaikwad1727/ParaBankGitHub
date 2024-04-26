@@ -3,6 +3,7 @@ package com.qa.tests;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.pageObjects.HomePage;
@@ -18,16 +19,18 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+//@Listeners(com.qa.reports.ExtentListener.class)
+
+@Epic("Account services")
+@Feature("Update Contact Info")
 
 public class UpdateContactInfoSuite extends BaseClass{
 	
 	@Severity(SeverityLevel.CRITICAL)
-	@Description("To Verify that the user able to update address and phone number field from Update profile page")
-	@Epic("Update Contact Info")
-	@Feature("Update Contact Info")
-	@Story("Update Profile")
-	@Test(groups= {"Regression", "Smoke"},enabled=true,priority=1,retryAnalyzer = TestRetryAnalyzer.class,description = "To Verify that the user able to update address and phone number field from Update profile page")
-	public void validateWhetherTheUserAbleToUpdateContactInfo() throws Throwable
+	@Description("TC_UCI_001:To Verify that the user able to update address and phone number field from Update profile page")
+	@Story("Update Profile Functionality Validation")
+	@Test(groups= {"Regression", "Smoke"},enabled=true,priority=1,description = "TC_UCI_001:To Verify that the user able to update address and phone number field from Update profile page")
+	public void TC_UCI_001_validateWhetherTheUserAbleToUpdateContactInfo() throws Throwable
 	{
 		String filePath=System.getProperty("user.dir")+"\\src\\test\\resources\\UseCaseData\\ParaBank_TestCases.xlsx";
 		Map<String, String> input=ReadExcel.getExcelData(filePath, "Update Contact Info", "TC_UCI_001");

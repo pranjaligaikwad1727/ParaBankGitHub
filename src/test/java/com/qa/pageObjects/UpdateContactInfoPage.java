@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.qa.reports.AllureListener;
+import com.qa.reports.ExtentLogger;
 import com.qa.reusableComponents.CommonMethods;
 
 import io.qameta.allure.Step;
@@ -122,21 +123,25 @@ public class UpdateContactInfoPage {
 	public boolean verifyUpdateProfileMsg(String expectedMsg) {
 
 		boolean flag = false;
+		CommonMethods.waitForElement(driver, "Updated Profile Message", updateProfileMsg);
 		String updateMsg=updateProfileMsg.getText().trim();
 		try {
 			if(updateMsg.equalsIgnoreCase(expectedMsg))
 			{
 				flag = true;
+				ExtentLogger.pass("Updated Message :"+updateMsg);
 				AllureListener.saveTextLog("Updated Message :"+updateMsg);
 			}
 			else
 			{
 				flag=false;
+				ExtentLogger.fail("User is not able to Update Contact Info");
 				AllureListener.saveTextLog("User is not able to Update Contact Info");
 				Assert.fail("User is not able to Update Contact Info");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
+			ExtentLogger.fail("User is not able to Update Contact Info");
 			AllureListener.saveTextLog("User is not able to Update Contact Info");
 			Assert.fail("User is not able to Update Contact Info");
 		}

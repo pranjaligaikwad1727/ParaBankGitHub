@@ -3,6 +3,7 @@ package com.qa.tests;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.pageObjects.BillPayPage;
@@ -19,16 +20,19 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
+//@Listeners(com.qa.reports.ExtentListener.class)
+
+@Epic("Account services")
+@Feature("Bill Payment")
+
 public class BillPaymentSuite extends BaseClass{
 
 
 	@Severity(SeverityLevel.CRITICAL)
-	@Description("To Verify that user able to pay the bill to the Payee account")
-	@Epic("Bill Pay")
-	@Feature("Bill Pay")
-	@Story("Bill Payment")
-	@Test(groups= {"Regression", "Smoke"},enabled=true,priority=1,retryAnalyzer = TestRetryAnalyzer.class,description = "To Verify that user able to pay the bill to the Payee account")
-	public void validateWhetherTheUserAbleBillPayment() throws Throwable
+	@Description("TC_BP_001:To Verify that user able to pay the bill to the Payee account")
+	@Story("Bill Payment Functionality Validation")
+	@Test(groups= {"Regression", "Smoke"},enabled=true,priority=1,description = "TC_BP_001:To Verify that user able to pay the bill to the Payee account")
+	public void TC_BP_001_validateWhetherTheUserAbleBillPayment() throws Throwable
 	{
 		String filePath=System.getProperty("user.dir")+"\\src\\test\\resources\\UseCaseData\\ParaBank_TestCases.xlsx";
 		Map<String, String> input=ReadExcel.getExcelData(filePath, "Bill Pay", "TC_BP_001");
