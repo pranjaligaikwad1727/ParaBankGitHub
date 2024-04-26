@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.tests.OpenNewAccountSuite">
+      <class name="com.qa.tests.UserSignUpSuite">
         <methods>
           <include name="initialize_driver"/>
-          <include name="TC_ONA_003_VerifyWhetherTheUserAbleToCreateNewAccountWithCheckingAccountType"/>
           <include name="tearDown"/>
+          <include name="TC_RF_001_VerifyWhetherTheUserABleToRegisterInParaBankApplicationWithValidTestData"/>
         </methods>
-      </class> <!-- com.qa.tests.OpenNewAccountSuite -->
+      </class> <!-- com.qa.tests.UserSignUpSuite -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

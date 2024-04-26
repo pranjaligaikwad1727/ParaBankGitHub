@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Failed suite [Failed suite [Para Bank Web Application ]]]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.qa.reports.ExtentListener"/>
-  </listeners>
-  <test thread-count="5" parallel="tests" name="Register Functionality Validation(failed)(failed)(failed)">
-    <groups>
-      <run>
-        <include name="Regression"/>
-      </run>
-    </groups>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.qa.tests.UserSignUpSuite">
         <methods>
@@ -19,5 +11,5 @@
         </methods>
       </class> <!-- com.qa.tests.UserSignUpSuite -->
     </classes>
-  </test> <!-- Register Functionality Validation(failed)(failed)(failed) -->
-</suite> <!-- Failed suite [Failed suite [Failed suite [Para Bank Web Application ]]] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -42,9 +42,9 @@ public class BaseClass {
 			setUpFireFox();
 		}
 
-		else if (browserName.equalsIgnoreCase("ie")) {
+		else if (browserName.equalsIgnoreCase("edge")) {
 
-			setUpIE();
+			setUpMircrosoftEdge();
 
 		}
 		tdriver = openurl(url);
@@ -87,7 +87,7 @@ public class BaseClass {
 	}
 
 	@Step("IE Browser Opened ")
-	public void setUpIE() {
+	public void setUpMircrosoftEdge() {
 		driver = new EdgeDriver();
 	}
 

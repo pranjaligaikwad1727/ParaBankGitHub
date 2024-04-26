@@ -18,8 +18,8 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Listeners({AllureListener.class})
-//@Listeners(com.qa.reports.ExtentListener.class)
+//@Listeners({AllureListener.class})
+@Listeners(com.qa.reports.ExtentListener.class)
 @Epic("User Registration")
 @Feature("Sign Up User")
 public class UserSignUpSuite extends BaseClass{

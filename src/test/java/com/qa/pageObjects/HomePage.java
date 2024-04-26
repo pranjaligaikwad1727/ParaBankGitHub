@@ -27,6 +27,13 @@ public class HomePage {
 
 	@FindBy(css = ".smallText")
 	WebElement headerUserName;
+	
+	
+	@FindBy(css = "[href*='billpay']")
+	WebElement billPay;
+	
+	@FindBy(css = "[href*='updateprofile']")
+	WebElement updateContactInfo;
 
 	public HomePage(WebDriver driver) {
 
@@ -67,6 +74,16 @@ public class HomePage {
 	public void clickOnTransferFundsTab() {
 		CommonMethods.waitForElement(driver,"Transfer Funds Tab", transferFunds);
 		CommonMethods.click_custom(transferFunds, "Transfer Funds Tab");
+	}
+	
+	@Step("Click on Bill Pay Tab")
+	public void clickOnBillPayTab() {
+		CommonMethods.click_custom(billPay, "Bill Pay");
+	}
+	
+	@Step("Click on Update Contact Info Tab")
+	public void clickOnUpdateContactInfoTab() {
+		CommonMethods.click_custom(updateContactInfo, "Update Contact Info");
 	}
 
 }

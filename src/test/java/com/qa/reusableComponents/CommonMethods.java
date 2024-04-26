@@ -161,7 +161,7 @@ public class CommonMethods {
 	}
 
 	// Select dropdown value value by value
-	public void selectDropDownByValue_custom(WebElement element, String fieldName, String ddValue) throws Throwable {
+	public static void  selectDropDownByValue_custom(WebElement element, String fieldName, String ddValue) throws Throwable {
 		try {
 			Select s = new Select(element);
 			s.selectByValue(ddValue);
