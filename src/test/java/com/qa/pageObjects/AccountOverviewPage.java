@@ -2,6 +2,8 @@ package com.qa.pageObjects;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +31,7 @@ public class AccountOverviewPage  {
 	
 	@FindBy(id="accountId")
 	WebElement accountNumberDetails;
+	
 	
 	
 	public AccountOverviewPage(WebDriver driver) {
@@ -141,6 +144,14 @@ public class AccountOverviewPage  {
 		return accountNumberAD;
 	}
 
-
+	@Step("Click on Transactions from Transaction Details page")
+	public void clickOnTransactionsFromTransactionDetailsPage(String transactionDesc,String index)
+	{
+		List<WebElement> transactions=driver.findElements(By.xpath("//*[@id='transactionTable']/tbody/tr["+index+"]/td[2]/a"));
+		int transDescription=Integer.parseInt(transactionDesc);
+		CommonMethods.waitForElement(driver, "Transactions", transactions.get(transDescription));
+		transactions.get(transDescription).click();
+		
+	}
 
 }
